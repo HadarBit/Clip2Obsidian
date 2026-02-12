@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <!-- State: setup required -->
+  <div id="state-setup" class="state hidden">
+    <p>Vault directory not configured.</p>
+    <button id="btn-open-setup">Setup</button>
+  </div>
+
+  <!-- State: permission needed -->
+  <div id="state-permission" class="state hidden">
+    <p>Permission needed to write files.</p>
+    <button id="btn-grant">Grant Access</button>
+  </div>
+
+  <!-- State: ready to save -->
+  <div id="state-ready" class="state hidden">
+    <div class="page-info">
+      <span id="page-type" class="badge">Article</span>
+      <p id="page-title" class="title"></p>
+    </div>
+    <input id="custom-tag" type="text" placeholder="Add tag (optional)">
+    <button id="btn-save">Save to Obsidian</button>
+  </div>
+
+  <!-- Feedback -->
+  <div id="feedback" class="feedback hidden"></div>
+
+  <script src="db.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
